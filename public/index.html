@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poetry Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Welcome to the Poetry Portal</h1>
+  <button onclick="showUpload()">Upload Poem</button>
+  <button onclick="showPoems()">View Poems</button>
+
+  <div id="upload-section" style="display:none;">
+    <h2>Upload Poem</h2>
+    <textarea id="poemText" placeholder="Type your poem here..."></textarea>
+    <button id="submitTextBtn">Submit Text</button>
+    <hr>
+    <form id="fileForm">
+      <input type="file" name="poemFile" />
+      <button type="submit">Upload File</button>
+    </form>
+  </div>
+
+  <div id="view-section" style="display:none;">
+    <h2>Poems</h2>
+    <div id="pageInfo" style="margin-bottom: 10px;"></div>
+    <div id="poemList"></div>
+    <button onclick="prevPage()">Previous</button>
+    <button onclick="nextPage()">Next</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
